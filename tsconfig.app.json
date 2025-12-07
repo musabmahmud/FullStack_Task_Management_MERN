@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    /* Build cache location (Vite default) */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    /* Modern target – safe with Vite (it down-compiles) */
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    /* React 19 + JSX */
+    "jsx": "react-jsx",
+    "useDefineForClassFields": true,
+    "ignoreDeprecations": "6.0",
+
+    /* Module system */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+
+    /* Important new TS 5.0+ flags (required for Vite + RTK Query + modern libraries) */
+    "verbatimModuleSyntax": true, // ← fixes CJS/ESM interop issues
+    "isolatedModules": true, // ← required by Vite/ESBuild
+    "allowImportingTsExtensions": true, // ← allows "import ./App.tsx" in Vite
+    "noEmit": true, // ← Vite emits JS, not tsc
+
+    /* Type checking & strictness – balanced for real projects */
+    "strict": true,
+    "noUnusedLocals": true, // ← good for catching dead code
+    "noUnusedParameters": true, // ← same
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true, // ← catches accidental side-effect imports
+
+    /* Skip checking node_modules (huge speedup) */
+    "skipLibCheck": true,
+
+    /* Vite-specific types */
+    "types": ["vite/client"],
+
+    /* Path aliases – you already use @/ */
+    // "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  /* Only include files that belong to the app (exclude test files, stories, etc.) */
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+
+  /* Explicitly exclude things Vite handles separately */
+  "exclude": ["node_modules", "dist"]
+}

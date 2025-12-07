@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+
+  .toolbox {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+
+  .dark {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #fb923c;
+    --color-base: #000000;
+    --color-tertiary: #fb923c;
+    --color-accent: #e65a50;
+    --color-muted: #6c757d;
+  }
+
+  .red {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+
+  .green {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+
+  .blue {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+
+  .sage {
+    --color-primary: #ea580c;
+    --color-foreground: #f8f8f8;
+    --color-secondary: #f97316;
+    --color-base: #f0f9ff;
+    --color-tertiary: #fb923c;
+    --color-accent: #ff311f;
+    --color-muted: #adb5bd;
+  }
+}
+
+@layer components {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .bg-muted {
+    background-color: var(--color-muted);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+}
+
+@layer utilities {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    appearance: textfield;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s,
+      color 9999s ease-in-out 0s;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(31 41 55) !important; /* gray-800 */
+  }
+
+  .dark input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(243 244 246) !important; /* gray-100 */
+    -webkit-box-shadow: 0 0 0px 1000px rgb(31 41 55) inset !important; /* gray-800 */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
